@@ -12,99 +12,90 @@
 <header class="header">
 <div class="header-content">
 
-<div class="logo" onclick="showPage('home')">Apple*</div>
+<div class="logo">
+<a href="#home">Apple</a>
+</div>
 
 <nav class="nav-links">
-<a onclick="showPage('home')">Inicio</a>
-<a onclick="showPage('products')">Productos</a>
-<a onclick="showPage('support')">Soporte</a>
+<a href="#home">Inicio</a>
+<a href="#products">Productos</a>
+<a href="#support">Soporte</a>
+<a href="#cart">Carrito <span id="count">0</span></a>
 </nav>
-
-<div class="cart-btn" onclick="toggleCart()">
-🛒 <span id="cartCount">0</span>
-</div>
 
 </div>
 </header>
 
 <main>
 
-<section id="home" class="page active">
+<section id="home" class="page">
 <div class="hero">
 <h1>Apple Store</h1>
 <p>Descubre lo último en innovación</p>
-<button onclick="showPage('products')" class="hero-btn">Ver productos</button>
+<a href="#products" class="hero-btn">Ver productos</a>
 </div>
 </section>
 
 <section id="products" class="page">
+
 <div class="container">
 
-<h2>Productos Apple</h2>
+<h2>Productos</h2>
 
 <div class="product-grid">
 
-<div class="product-card" onclick="openProduct('iPhone 15',19499)">
-<div class="product-image">
+<div class="product-card">
 <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-blue-select-202309?wid=512">
-</div>
 <h3>iPhone 15</h3>
 <p>$19,499</p>
-<button onclick="addToCart(event,'iPhone 15',19499)">Agregar</button>
+<button onclick="addProduct('iPhone 15',19499)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('iPhone 15 Pro',24499)">
-<div class="product-image">
+<div class="product-card">
 <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-blacktitanium-select?wid=512">
-</div>
 <h3>iPhone 15 Pro</h3>
 <p>$24,499</p>
-<button onclick="addToCart(event,'iPhone 15 Pro',24499)">Agregar</button>
+<button onclick="addProduct('iPhone 15 Pro',24499)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('MacBook Air M2',22999)">
-<div class="product-image">
+<div class="product-card">
 <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=512">
-</div>
-<h3>MacBook Air M2</h3>
+<h3>MacBook Air</h3>
 <p>$22,999</p>
-<button onclick="addToCart(event,'MacBook Air M2',22999)">Agregar</button>
+<button onclick="addProduct('MacBook Air',22999)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('AirPods Pro',5999)">
-<div class="product-image">
+<div class="product-card">
 <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=512">
-</div>
 <h3>AirPods Pro</h3>
 <p>$5,999</p>
-<button onclick="addToCart(event,'AirPods Pro',5999)">Agregar</button>
+<button onclick="addProduct('AirPods Pro',5999)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('Apple Watch Series 9',8999)">
-<div class="product-image">
+<div class="product-card">
 <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s9-midnight-select?wid=512">
-</div>
-<h3>Apple Watch Series 9</h3>
+<h3>Apple Watch</h3>
 <p>$8,999</p>
-<button onclick="addToCart(event,'Apple Watch Series 9',8999)">Agregar</button>
+<button onclick="addProduct('Apple Watch',8999)">Agregar</button>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
-<section id="product" class="page">
+<section id="cart" class="page">
 
-<div class="container product-detail">
+<div class="container">
 
-<h2 id="productTitle"></h2>
+<h2>Carrito</h2>
 
-<p id="productPrice"></p>
+<ul id="cartList"></ul>
 
-<button id="detailCartBtn">Agregar al carrito</button>
+<h3>Total: $<span id="total">0</span></h3>
 
-<button onclick="showPage('products')">Volver</button>
+<a href="#products" class="btn">Seguir comprando</a>
 
 </div>
 
@@ -114,27 +105,10 @@
 <div class="container">
 <h2>Soporte Apple</h2>
 <p>Centro de ayuda para productos Apple</p>
-<button>Contactar soporte</button>
 </div>
 </section>
 
 </main>
-
-<div id="cartSidebar" class="cart-sidebar">
-
-<div class="cart-header">
-<h3>Carrito</h3>
-<button onclick="toggleCart()">✕</button>
-</div>
-
-<ul id="cartItems"></ul>
-
-<div class="cart-footer">
-<p id="cartTotal">$0</p>
-<button>Finalizar compra</button>
-</div>
-
-</div>
 
 <script src="script.js"></script>
 
