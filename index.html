@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apple Style Store</title>
+<title>Apple Store</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,7 +12,7 @@
 <header class="header">
 <div class="header-content">
 
-<div class="logo" onclick="showPage('home')">Apple*</div>
+<div class="logo" onclick="showPage('home')">Apple</div>
 
 <nav class="nav-links">
 <a onclick="showPage('home')">Inicio</a>
@@ -30,62 +30,68 @@
 <main>
 
 <section id="home" class="page active">
-
 <div class="hero">
 <h1>Apple Store</h1>
-<p>Tecnología que redefine la innovación</p>
-<button onclick="showPage('products')" class="hero-btn">Explorar productos</button>
+<p>Descubre lo último en innovación</p>
+<button onclick="showPage('products')" class="hero-btn">Ver productos</button>
 </div>
-
 </section>
 
 <section id="products" class="page">
-
 <div class="container">
 
-<h2>Productos</h2>
+<h2>Productos Apple</h2>
 
 <div class="product-grid">
 
-<div class="product-card" onclick="openProduct('Auriculares Bluetooth Premium',1299)">
+<div class="product-card" onclick="openProduct('iPhone 15',19499)">
 <div class="product-image">
-<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90">
+<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-blue-select-202309?wid=512">
 </div>
-<h3>Auriculares Bluetooth Premium</h3>
-<p>$1299</p>
-<button onclick="addToCart(event,'Auriculares Bluetooth Premium',1299)">Agregar</button>
+<h3>iPhone 15</h3>
+<p>$19,499</p>
+<button onclick="addToCart(event,'iPhone 15',19499)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('Laptop Ultradelgada',18999)">
+<div class="product-card" onclick="openProduct('iPhone 15 Pro',24499)">
 <div class="product-image">
-<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-blacktitanium-select?wid=512">
 </div>
-<h3>Laptop Ultradelgada</h3>
-<p>$18999</p>
-<button onclick="addToCart(event,'Laptop Ultradelgada',18999)">Agregar</button>
+<h3>iPhone 15 Pro</h3>
+<p>$24,499</p>
+<button onclick="addToCart(event,'iPhone 15 Pro',24499)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('Smartwatch Deportivo',2450)">
+<div class="product-card" onclick="openProduct('MacBook Air M2',22999)">
 <div class="product-image">
-<img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12">
+<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=512">
 </div>
-<h3>Smartwatch Deportivo</h3>
-<p>$2450</p>
-<button onclick="addToCart(event,'Smartwatch Deportivo',2450)">Agregar</button>
+<h3>MacBook Air M2</h3>
+<p>$22,999</p>
+<button onclick="addToCart(event,'MacBook Air M2',22999)">Agregar</button>
 </div>
 
-<div class="product-card" onclick="openProduct('Monitor Curvo 27',5299)">
+<div class="product-card" onclick="openProduct('AirPods Pro',5999)">
 <div class="product-image">
-<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3">
+<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=512">
 </div>
-<h3>Monitor Curvo 27"</h3>
-<p>$5299</p>
-<button onclick="addToCart(event,'Monitor Curvo 27',5299)">Agregar</button>
+<h3>AirPods Pro</h3>
+<p>$5,999</p>
+<button onclick="addToCart(event,'AirPods Pro',5999)">Agregar</button>
+</div>
+
+<div class="product-card" onclick="openProduct('Apple Watch Series 9',8999)">
+<div class="product-image">
+<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s9-midnight-select?wid=512">
+</div>
+<h3>Apple Watch Series 9</h3>
+<p>$8,999</p>
+<button onclick="addToCart(event,'Apple Watch Series 9',8999)">Agregar</button>
 </div>
 
 </div>
-</div>
 
+</div>
 </section>
 
 <section id="product" class="page">
@@ -105,17 +111,11 @@
 </section>
 
 <section id="support" class="page">
-
 <div class="container">
-
-<h2>Soporte</h2>
-
-<p>Centro de ayuda y asistencia técnica para productos.</p>
-
+<h2>Soporte Apple</h2>
+<p>Centro de ayuda para productos Apple</p>
 <button>Contactar soporte</button>
-
 </div>
-
 </section>
 
 </main>
