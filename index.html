@@ -1,291 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Apple* Store</title>
-
+<title>Apple Style Store</title>
 <link rel="stylesheet" href="styles.css">
-
-<!-- Fuente estilo Apple -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 </head>
-
-
 <body>
 
-
-<!-- ================= HEADER ================= -->
-
 <header class="header">
-
-<div class="container header-content">
-
-<div class="logo">
-<a href="#"> Apple*</a>
-</div>
+<div class="header-content">
+<div class="logo" onclick="showPage('home')">Apple*</div>
 
 <nav class="nav-links">
-
-<a href="#" class="nav-item">Store</a>
-<a href="#" class="nav-item">Mac</a>
-<a href="#" class="nav-item">iPhone</a>
-<a href="#" class="nav-item">iPad</a>
-<a href="#" class="nav-item">Watch</a>
-<a href="#" class="nav-item">Accesorios</a>
-
+<a onclick="showPage('home')">Inicio</a>
+<a onclick="showPage('products')">Productos</a>
+<a onclick="showPage('support')">Soporte</a>
 </nav>
 
-<div class="cart">
-
-<span class="cart-icon">🛒</span>
-<span class="cart-count">0</span>
-
+<div class="cart-btn" onclick="toggleCart()">
+🛒 <span id="cartCount">0</span>
 </div>
-
 </div>
-
 </header>
 
+<main>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-<div class="container hero-content">
-
-<h1>Innovación en cada detalle</h1>
-
-<p>Descubre los productos más avanzados diseñados para cambiar tu forma de trabajar, crear y disfrutar.</p>
-
-<button class="btn-add-cart">Explorar productos</button>
-
+<section id="home" class="page active">
+<div class="hero">
+<h1>Apple Store</h1>
+<p>Innovación que transforma tu experiencia digital</p>
+<button onclick="showPage('products')" class="hero-btn">Explorar productos</button>
 </div>
-
 </section>
 
-
-
-<!-- ================= PRODUCTOS ================= -->
-
-<main class="main-content">
-
+<section id="products" class="page">
 <div class="container">
-
-<h2 class="section-title">Productos destacados</h2>
+<h2>Productos</h2>
 
 <div class="product-grid">
 
-<!-- PRODUCTO -->
-
-<article class="product-card">
-
-<div class="product-image">
-<img src="https://picsum.photos/300/200?1">
+<div class="product-card" onclick="openProduct('Auriculares Bluetooth Premium',1299)">
+<div class="product-image"></div>
+<h3>Auriculares Bluetooth Premium</h3>
+<p>$1299</p>
+<button onclick="addToCart(event,'Auriculares Bluetooth Premium',1299)">Agregar</button>
 </div>
 
-<h3 class="product-title">AirPods Pro</h3>
-
-<div class="product-price">
-<span class="currency">$</span>
-<span class="price-value">5,999</span>
+<div class="product-card" onclick="openProduct('Laptop Ultradelgada',18999)">
+<div class="product-image"></div>
+<h3>Laptop Ultradelgada</h3>
+<p>$18999</p>
+<button onclick="addToCart(event,'Laptop Ultradelgada',18999)">Agregar</button>
 </div>
 
-<button class="btn-add-cart">Agregar</button>
-
-</article>
-
-
-<!-- PRODUCTO -->
-
-<article class="product-card">
-
-<div class="product-image">
-<img src="https://picsum.photos/300/200?2">
+<div class="product-card" onclick="openProduct('Smartwatch Deportivo',2450)">
+<div class="product-image"></div>
+<h3>Smartwatch Deportivo</h3>
+<p>$2450</p>
+<button onclick="addToCart(event,'Smartwatch Deportivo',2450)">Agregar</button>
 </div>
 
-<h3 class="product-title">MacBook Air M3</h3>
-
-<div class="product-price">
-<span class="currency">$</span>
-<span class="price-value">24,999</span>
-</div>
-
-<button class="btn-add-cart">Agregar</button>
-
-</article>
-
-
-<!-- PRODUCTO -->
-
-<article class="product-card">
-
-<div class="product-image">
-<img src="https://picsum.photos/300/200?3">
-</div>
-
-<h3 class="product-title">Apple Watch Series 9</h3>
-
-<div class="product-price">
-<span class="currency">$</span>
-<span class="price-value">9,499</span>
-</div>
-
-<button class="btn-add-cart">Agregar</button>
-
-</article>
-
-
-<!-- PRODUCTO -->
-
-<article class="product-card">
-
-<div class="product-image">
-<img src="https://picsum.photos/300/200?4">
-</div>
-
-<h3 class="product-title">iPhone 15 Pro</h3>
-
-<div class="product-price">
-<span class="currency">$</span>
-<span class="price-value">28,999</span>
-</div>
-
-<button class="btn-add-cart">Agregar</button>
-
-</article>
-
-
-<!-- PRODUCTO -->
-
-<article class="product-card">
-
-<div class="product-image">
-<img src="https://picsum.photos/300/200?5">
-</div>
-
-<h3 class="product-title">Magic Keyboard</h3>
-
-<div class="product-price">
-<span class="currency">$</span>
-<span class="price-value">2,499</span>
-</div>
-
-<button class="btn-add-cart">Agregar</button>
-
-</article>
-
-
-<!-- PRODUCTO -->
-
-<article class="product-card">
-
-<div class="product-image">
-<img src="https://picsum.photos/300/200?6">
-</div>
-
-<h3 class="product-title">Studio Display</h3>
-
-<div class="product-price">
-<span class="currency">$</span>
-<span class="price-value">32,999</span>
-</div>
-
-<button class="btn-add-cart">Agregar</button>
-
-</article>
-
+<div class="product-card" onclick="openProduct('Monitor Curvo 27',5299)">
+<div class="product-image"></div>
+<h3>Monitor Curvo 27"</h3>
+<p>$5299</p>
+<button onclick="addToCart(event,'Monitor Curvo 27',5299)">Agregar</button>
 </div>
 
 </div>
+</div>
+</section>
+
+<section id="product" class="page">
+<div class="container product-detail">
+<h2 id="productTitle"></h2>
+<p id="productPrice"></p>
+<button id="detailCartBtn">Agregar al carrito</button>
+<button onclick="showPage('products')">Volver</button>
+</div>
+</section>
+
+<section id="support" class="page">
+<div class="container">
+<h2>Soporte</h2>
+<p>Centro de ayuda y asistencia técnica</p>
+<button>Contactar soporte</button>
+</div>
+</section>
 
 </main>
 
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-<div class="footer-links">
-
-<div class="container footer-columns">
-
-<div class="footer-column">
-
-<h4>Apple</h4>
-
-<ul>
-
-<li><a href="#">Acerca de Apple</a></li>
-<li><a href="#">Noticias</a></li>
-<li><a href="#">Trabaja con nosotros</a></li>
-
-</ul>
-
+<div id="cartSidebar" class="cart-sidebar">
+<div class="cart-header">
+<h3>Carrito</h3>
+<button onclick="toggleCart()">✕</button>
 </div>
 
+<ul id="cartItems"></ul>
 
-<div class="footer-column">
-
-<h4>Soporte</h4>
-
-<ul>
-
-<li><a href="#">Centro de ayuda</a></li>
-<li><a href="#">Garantía</a></li>
-<li><a href="#">Contacto</a></li>
-
-</ul>
-
+<div class="cart-footer">
+<p id="cartTotal">$0</p>
+<button>Finalizar compra</button>
+</div>
 </div>
 
-
-<div class="footer-column">
-
-<h4>Servicios</h4>
-
-<ul>
-
-<li><a href="#">Apple Music</a></li>
-<li><a href="#">Apple TV+</a></li>
-<li><a href="#">iCloud</a></li>
-
-</ul>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>Cuenta</h4>
-
-<ul>
-
-<li><a href="#">Iniciar sesión</a></li>
-<li><a href="#">Tus pedidos</a></li>
-<li><a href="#">Configuración</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<p>© 2026 Apple* Replica - Proyecto académico</p>
-
-</div>
-
-</footer>
-
-
+<script src="script.js"></script>
 </body>
-
 </html>
