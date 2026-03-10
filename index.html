@@ -1,229 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda - Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apple* Store</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Fuente estilo Apple -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
+
+
 <body>
-    <!-- ========== HEADER PRINCIPAL ========== -->
-    <header class="header">
-        <div class="header-main">
-            <div class="header-content">
-                <!-- Logo / Nombre de la tienda -->
-                <div class="logo">
-                    <a href="#">MiTienda</a>
-                </div>
 
-                <!-- Barra de búsqueda -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscar productos...">
-                    <button class="search-btn">🔍</button>
-                </div>
 
-                <!-- Enlaces de navegación derecha -->
-                <nav class="nav-links">
-                    <a href="#" class="nav-item">
-                        <span class="nav-line1">Hola, Identifícate</span>
-                        <span class="nav-line2">Cuentas y Listas</span>
-                    </a>
-                    <a href="#" class="nav-item">
-                        <span class="nav-line1">Devoluciones</span>
-                        <span class="nav-line2">y Pedidos</span>
-                    </a>
-                    <a href="#" class="cart">
-                        <span class="cart-icon">🛒</span>
-                        <span class="cart-text">Carrito</span>
-                        <span class="cart-count">[0]</span>
-                    </a>
-                </nav>
-            </div>
-        </div>
+<!-- ================= HEADER ================= -->
 
-        <!-- Sub-navegación -->
-        <div class="header-sub">
-            <div class="header-content">
-                <nav class="sub-nav">
-                    <a href="#">Ofertas</a>
-                    <a href="#">Servicio al Cliente</a>
-                    <a href="#">Listas de Deseos</a>
-                    <a href="#">Novedades</a>
-                    <a href="#">Más Vendidos</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+<header class="header">
 
-    <!-- ========== CONTENIDO PRINCIPAL ========== -->
-    <main class="main-content">
-        <div class="container">
-            <!-- Título de sección -->
-            <h2 class="section-title">Productos Destacados</h2>
+<div class="container header-content">
 
-            <!-- Grilla de productos -->
-            <div class="product-grid">
-                <!-- Producto 1 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Auriculares Bluetooth Premium con Cancelación de Ruido</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">1,299</span>
-                        <span class="price-decimals">.00</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+<div class="logo">
+<a href="#"> Apple*</a>
+</div>
 
-                <!-- Producto 2 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Laptop Ultradelgada 15.6" Intel Core i7</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">18,999</span>
-                        <span class="price-decimals">.99</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+<nav class="nav-links">
 
-                <!-- Producto 3 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Smartwatch Deportivo Resistente al Agua</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">2,450</span>
-                        <span class="price-decimals">.00</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+<a href="#" class="nav-item">Store</a>
+<a href="#" class="nav-item">Mac</a>
+<a href="#" class="nav-item">iPhone</a>
+<a href="#" class="nav-item">iPad</a>
+<a href="#" class="nav-item">Watch</a>
+<a href="#" class="nav-item">Accesorios</a>
 
-                <!-- Producto 4 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Cámara Digital Mirrorless 4K</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">15,750</span>
-                        <span class="price-decimals">.00</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+</nav>
 
-                <!-- Producto 5 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Teclado Mecánico RGB Gaming</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">899</span>
-                        <span class="price-decimals">.00</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+<div class="cart">
 
-                <!-- Producto 6 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Monitor Curvo 27" 144Hz</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">5,299</span>
-                        <span class="price-decimals">.99</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+<span class="cart-icon">🛒</span>
+<span class="cart-count">0</span>
 
-                <!-- Producto 7 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Mouse Inalámbrico Ergonómico</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">459</span>
-                        <span class="price-decimals">.00</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
+</div>
 
-                <!-- Producto 8 -->
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-title">Bocina Portátil Bluetooth 20W</h3>
-                    <div class="product-price">
-                        <span class="currency">$</span>
-                        <span class="price-value">1,199</span>
-                        <span class="price-decimals">.00</span>
-                    </div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-    </main>
+</div>
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <!-- Botón volver arriba -->
-        <div class="back-to-top">
-            <a href="#">Volver arriba</a>
-        </div>
+</header>
 
-        <!-- Sección de enlaces -->
-        <div class="footer-links">
-            <div class="container">
-                <div class="footer-columns">
-                    <!-- Columna 1 -->
-                    <div class="footer-column">
-                        <h4>Conócenos</h4>
-                        <ul>
-                            <li><a href="#">Información corporativa</a></li>
-                            <li><a href="#">Acerca de nosotros</a></li>
-                            <li><a href="#">Carreras</a></li>
-                            <li><a href="#">Noticias</a></li>
-                        </ul>
-                    </div>
 
-                    <!-- Columna 2 -->
-                    <div class="footer-column">
-                        <h4>Gana dinero con nosotros</h4>
-                        <ul>
-                            <li><a href="#">Vende tus productos</a></li>
-                            <li><a href="#">Programa de afiliados</a></li>
-                            <li><a href="#">Publica tu libro</a></li>
-                            <li><a href="#">Anuncia tus productos</a></li>
-                        </ul>
-                    </div>
+<!-- ================= HERO ================= -->
 
-                    <!-- Columna 3 -->
-                    <div class="footer-column">
-                        <h4>Métodos de pago</h4>
-                        <ul>
-                            <li><a href="#">Tarjetas de crédito</a></li>
-                            <li><a href="#">Tarjetas de regalo</a></li>
-                            <li><a href="#">Meses sin intereses</a></li>
-                            <li><a href="#">Recarga tu saldo</a></li>
-                        </ul>
-                    </div>
+<section class="hero">
 
-                    <!-- Columna 4 -->
-                    <div class="footer-column">
-                        <h4>¿Necesitas ayuda?</h4>
-                        <ul>
-                            <li><a href="#">Tu cuenta</a></li>
-                            <li><a href="#">Tus pedidos</a></li>
-                            <li><a href="#">Políticas de envío</a></li>
-                            <li><a href="#">Devoluciones</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container hero-content">
 
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p>© 2026 MiTienda. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+<h1>Innovación en cada detalle</h1>
+
+<p>Descubre los productos más avanzados diseñados para cambiar tu forma de trabajar, crear y disfrutar.</p>
+
+<button class="btn-add-cart">Explorar productos</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTOS ================= -->
+
+<main class="main-content">
+
+<div class="container">
+
+<h2 class="section-title">Productos destacados</h2>
+
+<div class="product-grid">
+
+<!-- PRODUCTO -->
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://picsum.photos/300/200?1">
+</div>
+
+<h3 class="product-title">AirPods Pro</h3>
+
+<div class="product-price">
+<span class="currency">$</span>
+<span class="price-value">5,999</span>
+</div>
+
+<button class="btn-add-cart">Agregar</button>
+
+</article>
+
+
+<!-- PRODUCTO -->
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://picsum.photos/300/200?2">
+</div>
+
+<h3 class="product-title">MacBook Air M3</h3>
+
+<div class="product-price">
+<span class="currency">$</span>
+<span class="price-value">24,999</span>
+</div>
+
+<button class="btn-add-cart">Agregar</button>
+
+</article>
+
+
+<!-- PRODUCTO -->
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://picsum.photos/300/200?3">
+</div>
+
+<h3 class="product-title">Apple Watch Series 9</h3>
+
+<div class="product-price">
+<span class="currency">$</span>
+<span class="price-value">9,499</span>
+</div>
+
+<button class="btn-add-cart">Agregar</button>
+
+</article>
+
+
+<!-- PRODUCTO -->
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://picsum.photos/300/200?4">
+</div>
+
+<h3 class="product-title">iPhone 15 Pro</h3>
+
+<div class="product-price">
+<span class="currency">$</span>
+<span class="price-value">28,999</span>
+</div>
+
+<button class="btn-add-cart">Agregar</button>
+
+</article>
+
+
+<!-- PRODUCTO -->
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://picsum.photos/300/200?5">
+</div>
+
+<h3 class="product-title">Magic Keyboard</h3>
+
+<div class="product-price">
+<span class="currency">$</span>
+<span class="price-value">2,499</span>
+</div>
+
+<button class="btn-add-cart">Agregar</button>
+
+</article>
+
+
+<!-- PRODUCTO -->
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://picsum.photos/300/200?6">
+</div>
+
+<h3 class="product-title">Studio Display</h3>
+
+<div class="product-price">
+<span class="currency">$</span>
+<span class="price-value">32,999</span>
+</div>
+
+<button class="btn-add-cart">Agregar</button>
+
+</article>
+
+</div>
+
+</div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-links">
+
+<div class="container footer-columns">
+
+<div class="footer-column">
+
+<h4>Apple</h4>
+
+<ul>
+
+<li><a href="#">Acerca de Apple</a></li>
+<li><a href="#">Noticias</a></li>
+<li><a href="#">Trabaja con nosotros</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Soporte</h4>
+
+<ul>
+
+<li><a href="#">Centro de ayuda</a></li>
+<li><a href="#">Garantía</a></li>
+<li><a href="#">Contacto</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Servicios</h4>
+
+<ul>
+
+<li><a href="#">Apple Music</a></li>
+<li><a href="#">Apple TV+</a></li>
+<li><a href="#">iCloud</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Cuenta</h4>
+
+<ul>
+
+<li><a href="#">Iniciar sesión</a></li>
+<li><a href="#">Tus pedidos</a></li>
+<li><a href="#">Configuración</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>© 2026 Apple* Replica - Proyecto académico</p>
+
+</div>
+
+</footer>
+
+
 </body>
+
 </html>

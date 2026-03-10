@@ -1,7 +1,3 @@
-/* ========================================
-   VARIABLES (MODO CLARO)
-======================================== */
-
 :root{
 
 --bg-main:#f5f5f7;
@@ -17,7 +13,7 @@
 --button-bg:#0071e3;
 --button-hover:#0077ed;
 
---shadow-soft:0 6px 25px rgba(0,0,0,0.08);
+--shadow-soft:0 10px 30px rgba(0,0,0,0.08);
 
 }
 
@@ -25,7 +21,7 @@
 
 :root{
 
---bg-main:#000000;
+--bg-main:#000;
 --bg-card:#1c1c1e;
 
 --text-main:#f5f5f7;
@@ -38,16 +34,18 @@
 --button-bg:#0a84ff;
 --button-hover:#409cff;
 
---shadow-soft:0 6px 25px rgba(0,0,0,0.5);
+--shadow-soft:0 10px 30px rgba(0,0,0,0.5);
 
 }
 
 }
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 body{
@@ -63,21 +61,22 @@ line-height:1.5;
 }
 
 a{
+
 text-decoration:none;
 color:inherit;
+
 }
 
 ul{
-list-style:none;
-}
 
+list-style:none;
+
+}
 
 .container{
 
 max-width:1200px;
-
 margin:auto;
-
 padding:0 20px;
 
 }
@@ -85,99 +84,33 @@ padding:0 20px;
 .header{
 
 position:sticky;
-
 top:0;
-
 z-index:100;
 
 background:var(--header-bg);
 
 backdrop-filter:blur(20px);
-
 -webkit-backdrop-filter:blur(20px);
 
 border-bottom:1px solid var(--border-color);
 
 }
 
-.header-main{
-
-padding:12px 0;
-
-}
-
 .header-content{
 
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
 
-gap:20px;
+height:60px;
 
 }
 
 
 .logo a{
 
-font-size:24px;
-
+font-size:22px;
 font-weight:600;
-
-}
-
-.search-bar{
-
-flex:1;
-
-max-width:600px;
-
-display:flex;
-
-border-radius:10px;
-
-overflow:hidden;
-
-border:1px solid var(--border-color);
-
-}
-
-.search-bar input{
-
-flex:1;
-
-padding:10px 15px;
-
-border:none;
-
-background:transparent;
-
-color:var(--text-main);
-
-outline:none;
-
-}
-
-.search-btn{
-
-background:var(--button-bg);
-
-color:white;
-
-border:none;
-
-padding:0 18px;
-
-cursor:pointer;
-
-transition:0.25s;
-
-}
-
-.search-btn:hover{
-
-background:var(--button-hover);
 
 }
 
@@ -185,142 +118,119 @@ background:var(--button-hover);
 .nav-links{
 
 display:flex;
-
-align-items:center;
-
-gap:15px;
+gap:20px;
 
 }
 
 .nav-item{
 
-display:flex;
+font-size:14px;
+font-weight:500;
 
-flex-direction:column;
+opacity:.8;
 
-padding:6px 10px;
-
-border-radius:8px;
-
-transition:0.25s;
+transition:.25s;
 
 }
 
 .nav-item:hover{
 
-background:rgba(0,0,0,0.05);
+opacity:1;
 
 }
 
-.nav-line1{
-
-font-size:12px;
-
-color:var(--text-secondary);
-
-}
-
-.nav-line2{
-
-font-size:14px;
-
-font-weight:500;
-
-}
 
 .cart{
 
 display:flex;
-
 align-items:center;
-
 gap:6px;
 
-padding:6px 10px;
-
-border-radius:8px;
-
-transition:0.25s;
-
-}
-
-.cart:hover{
-
-background:rgba(0,0,0,0.05);
+cursor:pointer;
 
 }
 
 .cart-icon{
 
-font-size:20px;
+font-size:18px;
 
 }
 
 .cart-count{
 
+font-size:13px;
 color:var(--button-bg);
 
-font-size:12px;
-
 }
 
 
-.header-sub{
+.hero{
 
-border-bottom:1px solid var(--border-color);
+padding:100px 20px;
 
-}
+text-align:center;
 
-.sub-nav{
-
-display:flex;
-
-gap:18px;
-
-padding:10px 0;
+background:linear-gradient(180deg,#f5f5f7,#ffffff);
 
 }
 
-.sub-nav a{
+.hero h1{
 
-font-size:14px;
+font-size:48px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:18px;
 
 color:var(--text-secondary);
 
-transition:0.25s;
+max-width:600px;
+
+margin:auto;
+
+margin-bottom:30px;
 
 }
 
-.sub-nav a:hover{
+@media (prefers-color-scheme: dark){
 
-color:var(--text-main);
+.hero{
+
+background:linear-gradient(180deg,#000,#111);
 
 }
 
+}
 
 .main-content{
 
-padding:40px 0;
+padding:60px 0;
 
 }
 
 .section-title{
 
 font-size:28px;
-
 font-weight:600;
 
-margin-bottom:25px;
+margin-bottom:30px;
 
 }
+
 
 .product-grid{
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-gap:28px;
+gap:30px;
 
 }
 
@@ -335,10 +245,9 @@ border:1px solid var(--border-color);
 padding:20px;
 
 display:flex;
-
 flex-direction:column;
 
-transition:all .35s ease;
+transition:all .4s cubic-bezier(.25,.8,.25,1);
 
 box-shadow:var(--shadow-soft);
 
@@ -346,14 +255,16 @@ box-shadow:var(--shadow-soft);
 
 .product-card:hover{
 
-transform:translateY(-6px) scale(1.02);
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 
 }
+
 
 .product-image{
 
 width:100%;
-
 height:200px;
 
 background:#f2f2f2;
@@ -362,27 +273,26 @@ border-radius:14px;
 
 margin-bottom:15px;
 
+overflow:hidden;
+
 display:flex;
-
 align-items:center;
-
 justify-content:center;
 
 }
 
-.product-image::after{
+.product-image img{
 
-content:"📦";
+width:100%;
+height:100%;
 
-font-size:40px;
-
-opacity:0.4;
+object-fit:cover;
 
 }
 
 .product-title{
 
-font-size:15px;
+font-size:16px;
 
 font-weight:500;
 
@@ -399,15 +309,13 @@ margin-bottom:15px;
 .currency{
 
 font-size:12px;
-
 vertical-align:top;
 
 }
 
 .price-value{
 
-font-size:26px;
-
+font-size:24px;
 font-weight:600;
 
 }
@@ -415,7 +323,6 @@ font-weight:600;
 .price-decimals{
 
 font-size:12px;
-
 vertical-align:top;
 
 }
@@ -449,20 +356,23 @@ background:var(--button-hover);
 transform:scale(1.05);
 
 }
+@keyframes addCart{
 
-.btn-add-cart:active{
-
-transform:scale(.95);
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
 
 }
 
-.back-to-top{
+.btn-add-cart:active{
 
-padding:16px;
+animation:addCart .3s ease;
 
-text-align:center;
+}
 
-border-top:1px solid var(--border-color);
+.footer{
+
+margin-top:60px;
 
 }
 
@@ -494,7 +404,7 @@ font-weight:600;
 
 .footer-column ul li{
 
-margin-bottom:10px;
+margin-bottom:8px;
 
 }
 
@@ -524,13 +434,7 @@ color:var(--text-secondary);
 
 }
 
-@media (max-width:992px){
-
-.product-grid{
-
-grid-template-columns:repeat(3,1fr);
-
-}
+@media (max-width:900px){
 
 .footer-columns{
 
@@ -540,55 +444,23 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-@media (max-width:768px){
+@media (max-width:600px){
 
-.header-content{
+.nav-links{
 
-flex-wrap:wrap;
-
-}
-
-.search-bar{
-
-width:100%;
-
-max-width:100%;
-
-margin-top:10px;
+display:none;
 
 }
 
-.product-grid{
+.hero h1{
 
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.sub-nav{
-
-overflow-x:auto;
-
-}
-
-}
-
-@media (max-width:480px){
-
-.product-grid{
-
-grid-template-columns:1fr;
+font-size:36px;
 
 }
 
 .footer-columns{
 
 grid-template-columns:1fr;
-
-}
-
-.logo a{
-
-font-size:20px;
 
 }
 
