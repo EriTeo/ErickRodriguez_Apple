@@ -6,10 +6,12 @@
 <title>Apple Style Store</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header class="header">
 <div class="header-content">
+
 <div class="logo" onclick="showPage('home')">Apple*</div>
 
 <nav class="nav-links">
@@ -21,48 +23,61 @@
 <div class="cart-btn" onclick="toggleCart()">
 🛒 <span id="cartCount">0</span>
 </div>
+
 </div>
 </header>
 
 <main>
 
 <section id="home" class="page active">
+
 <div class="hero">
 <h1>Apple Store</h1>
-<p>Innovación que transforma tu experiencia digital</p>
+<p>Tecnología que redefine la innovación</p>
 <button onclick="showPage('products')" class="hero-btn">Explorar productos</button>
 </div>
+
 </section>
 
 <section id="products" class="page">
+
 <div class="container">
+
 <h2>Productos</h2>
 
 <div class="product-grid">
 
 <div class="product-card" onclick="openProduct('Auriculares Bluetooth Premium',1299)">
-<div class="product-image"></div>
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90">
+</div>
 <h3>Auriculares Bluetooth Premium</h3>
 <p>$1299</p>
 <button onclick="addToCart(event,'Auriculares Bluetooth Premium',1299)">Agregar</button>
 </div>
 
 <div class="product-card" onclick="openProduct('Laptop Ultradelgada',18999)">
-<div class="product-image"></div>
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+</div>
 <h3>Laptop Ultradelgada</h3>
 <p>$18999</p>
 <button onclick="addToCart(event,'Laptop Ultradelgada',18999)">Agregar</button>
 </div>
 
 <div class="product-card" onclick="openProduct('Smartwatch Deportivo',2450)">
-<div class="product-image"></div>
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12">
+</div>
 <h3>Smartwatch Deportivo</h3>
 <p>$2450</p>
 <button onclick="addToCart(event,'Smartwatch Deportivo',2450)">Agregar</button>
 </div>
 
 <div class="product-card" onclick="openProduct('Monitor Curvo 27',5299)">
-<div class="product-image"></div>
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3">
+</div>
 <h3>Monitor Curvo 27"</h3>
 <p>$5299</p>
 <button onclick="addToCart(event,'Monitor Curvo 27',5299)">Agregar</button>
@@ -70,28 +85,43 @@
 
 </div>
 </div>
+
 </section>
 
 <section id="product" class="page">
+
 <div class="container product-detail">
+
 <h2 id="productTitle"></h2>
+
 <p id="productPrice"></p>
+
 <button id="detailCartBtn">Agregar al carrito</button>
+
 <button onclick="showPage('products')">Volver</button>
+
 </div>
+
 </section>
 
 <section id="support" class="page">
+
 <div class="container">
+
 <h2>Soporte</h2>
-<p>Centro de ayuda y asistencia técnica</p>
+
+<p>Centro de ayuda y asistencia técnica para productos.</p>
+
 <button>Contactar soporte</button>
+
 </div>
+
 </section>
 
 </main>
 
 <div id="cartSidebar" class="cart-sidebar">
+
 <div class="cart-header">
 <h3>Carrito</h3>
 <button onclick="toggleCart()">✕</button>
@@ -103,8 +133,10 @@
 <p id="cartTotal">$0</p>
 <button>Finalizar compra</button>
 </div>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
